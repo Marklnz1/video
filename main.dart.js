@@ -66145,7 +66145,10 @@ $ia9:1}
 A.LP.prototype={}
 A.a4s.prototype={
 $1(a){var s,r=a.a
-if(r!=null){if(B.b.A(r,"host")||a.c!==0||!B.b.A(r,"UDP")){A.dI("CANDIDATO RECHAZADO : "+A.I(["candidate",r,"sdpMid",J.bS(a.b),"sdpMlineIndex",a.c],t.N,t.X).k(0))
+if(r!=null){if(!B.b.A(r,"host"))if(a.c===0)s=!B.b.A(r,"UDP")&&!B.b.A(r,"udp")
+else s=!0
+else s=!0
+if(s){A.dI("CANDIDATO RECHAZADO : "+A.I(["candidate",r,"sdpMid",J.bS(a.b),"sdpMlineIndex",a.c],t.N,t.X).k(0))
 return}s=t.z
 this.a.$1(A.I(["candidate",r,"sdpMid",J.bS(a.b),"sdpMlineIndex",a.c],s,s))}},
 $S:423}
